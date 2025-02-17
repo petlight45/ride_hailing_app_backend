@@ -25,7 +25,7 @@ To get started with this project, follow these steps:
 git clone https://github.com/petlight45/ride_hailing_app_backend.git
 ```
 
-2. **Change directory
+2. **Change directory**
 
 ```
 cd ride_hailing_app_backend
@@ -34,7 +34,8 @@ cd ride_hailing_app_backend
 ## Configuration
 
 1. **Set up environmental variables**
-   For linux, Mac run
+
+For linux, Mac run
 
     ```
     cp ./envs/.env.example ./envs/.env
@@ -51,6 +52,7 @@ For Windows(PowerShell)
       ```
       Copy-Item -Path ./envs/.env.example -Destination ./envs/.env
         ```
+
 
 Update the .env file with your local configuration values.
 
