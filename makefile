@@ -4,17 +4,17 @@
 
 # Build docker image
 build:
-	docker-compose -f docker-compose.yaml build
+	docker compose -f docker-compose.yaml build
 
 build-test:
-	ls && docker-compose -f ./devops/docker/docker-compose-test.yaml build
+	ls && docker compose -f ./devops/docker/docker-compose-test.yaml build
 
 # Tear down the stack
 down:
-	docker-compose -f docker-compose.yaml down
+	docker compose -f docker-compose.yaml down
 
 down-test:
-	docker-compose -f ./devops/docker/docker-compose-test.yaml down
+	docker compose -f ./devops/docker/docker-compose-test.yaml down
 
 
 # ---------------------------------------------------------------------------------------------------------------------
@@ -23,7 +23,7 @@ down-test:
 
 # Run migrations
 django-migrate:
-	docker-compose -f devops/docker/docker-compose.yaml run --rm backend python manage.py migrate
+	docker compose -f devops/docker/docker-compose.yaml run --rm backend python manage.py migrate
 
 
 # ---------------------------------------------------------------------------------------------------------------------
@@ -32,4 +32,4 @@ django-migrate:
 
 # Run tests locally
 test-execute:
-	docker-compose -f devops/docker/docker-compose-test.yaml run --rm backend coverage run --source='django.app' manage.py test app.tests && coverage report -m
+	docker compose -f devops/docker/docker-compose-test.yaml run --rm backend coverage run --source='django.app' manage.py test app.tests && coverage report -m
