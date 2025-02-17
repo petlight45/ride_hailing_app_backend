@@ -16,6 +16,10 @@ COPY --chown=django:django ./devops/docker/django/start.sh /django/start.sh
 RUN sed -i 's/\r$//g' /django/start.sh
 RUN chmod +x /django/start.sh
 
+COPY --chown=django:django ./devops/docker/django/test/start_test.sh /django/start_test.sh
+RUN sed -i 's/\r$//g' /django/start_test.sh
+RUN chmod +x /django/start_test.sh
+
 
 # Copying other files
 ADD . .
