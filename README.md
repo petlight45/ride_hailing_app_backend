@@ -56,15 +56,31 @@ For Windows(PowerShell)
 
 Update the .env file with your local configuration values.
 
-DJANGO_SECRET_KEY = The secret key used for cryptographic signing in this Django app
-DJANGO_DEBUG = Whether the Django app runs in debug mode (True for development)
-DJANGO_ALLOWED_HOSTS = The list of allowed hostnames for this Django app
-DJANGO_CSRF_TRUSTED_ORIGINS = The trusted origins for CSRF protection
-DJANGO_SETTINGS_MODULE = The settings module to be used for this Django app
-DJANGO_USE_MEMORY_DATABASE = Whether to use an in-memory database for testing
-DJANGO_CORS_ALLOWED_ORIGINS = The allowed origins for Cross-Origin Resource Sharing (CORS)
-DJANGO_EXECUTION_ENVIRONMENT = The execution environment in which this Django app is running
-DJANGO_GUEST_ENDPOINT_API_KEY = The API key used to authenticate guest endpoint requests
+    DJANGO_SECRET_KEY = The secret key used for cryptographic signing in this Django app
+
+
+    DJANGO_DEBUG = Whether the Django app runs in debug mode (True for development)
+
+
+    DJANGO_ALLOWED_HOSTS = The list of allowed hostnames for this Django app
+
+
+    DJANGO_CSRF_TRUSTED_ORIGINS = The trusted origins for CSRF protection
+
+
+    DJANGO_SETTINGS_MODULE = The settings module to be used for this Django app
+
+
+    DJANGO_USE_MEMORY_DATABASE = Whether to use an in-memory database for testing
+
+
+    DJANGO_CORS_ALLOWED_ORIGINS = The allowed origins for Cross-Origin Resource Sharing (CORS)
+
+
+    DJANGO_EXECUTION_ENVIRONMENT = The execution environment in which this Django app is running
+
+
+    DJANGO_GUEST_ENDPOINT_API_KEY = The API key used to authenticate guest endpoint requests
 
 ## Running the Server
 
