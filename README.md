@@ -8,6 +8,7 @@ dynamically based on real-time factors such as demand, distance, and traffic con
 
 - **Unit Tests & Integration Tests**: Written with Django built-in testing framework unittests.
 - **CI Pipeline**: Implemented with Github Actions.
+- **Pre-Commit Hooks**: For Linting
 
 ## Table of Contents
 
