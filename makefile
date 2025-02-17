@@ -32,4 +32,4 @@ django-migrate:
 
 # Run tests locally
 test-execute:
-	docker compose -f devops/docker/docker-compose-test.yaml run --rm backend coverage run --source='django.app' manage.py test app.tests && coverage report -m
+	docker compose -f devops/docker/docker-compose-test.yaml run --rm backend coverage run --source='app' manage.py test app.tests && coverage report -m
