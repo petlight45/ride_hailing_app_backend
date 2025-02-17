@@ -37,4 +37,4 @@ jobs:
         run: make test-execute
 
       - name: Tear down the Stack
-        run: make down
+        run: make down-test
