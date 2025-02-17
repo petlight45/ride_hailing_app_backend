@@ -7,7 +7,7 @@ build:
 	docker compose -f docker-compose.yaml build
 
 build-test:
-	ls && docker compose -f ./devops/docker/docker-compose-test.yaml build
+	docker compose -f ./devops/docker/docker-compose-test.yaml build
 
 # Tear down the stack
 down:

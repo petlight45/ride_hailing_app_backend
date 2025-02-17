@@ -15,6 +15,8 @@ dynamically based on real-time factors such as demand, distance, and traffic con
 - [Installation](#installation)
 - [Configuration](#configuration)
 - [Running the Server](#running-the-server)
+- [Executing Tests](#executing-tests)
+- [Test Coverage Reports](#test-coverage-reports)
 
 ## Installation
 
@@ -110,3 +112,43 @@ Or(if the above failed)
       ```
       docker compose up --build
     ```
+
+
+## Executing Tests
+
+To execute the tests:
+Without Docker;
+
+After setting up virtual environments, run
+```
+    coverage run --source='app' manage.py test app.tests
+
+    coverage report -m
+```
+
+
+With Docker;
+Install docker and docker compose on your operating environment
+
+For linux, Windows or Mac run
+
+    ```
+    docker compose -f ./devops/docker/docker-compose-test.yaml build
+
+    docker compose -f devops/docker/docker-compose-test.yaml run --rm backend  "./start_test.sh"
+    ```
+
+Or(if the above failed)
+
+      ```
+       docker-compose run --rm backend  "./start_test.sh"
+    ```
+
+## Test Coverage Reports
+
+To view coverage report as html
+
+Open the file;
+```
+    htmlcov/index.html
+```
