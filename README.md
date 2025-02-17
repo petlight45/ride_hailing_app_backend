@@ -3,6 +3,12 @@
 This project is a Django HTTP API server that exposes an endpoint to which allows you to calculate a ride price
 dynamically based on real-time factors such as demand, distance, and traffic conditions.
 
+
+## Features
+
+- **Unit Tests & Integration Tests**: Written with Django built-in testing framework unittests.
+- **CI Pipeline**: Implemented with Github Actions.
+
 ## Table of Contents
 
 - [Installation](#installation)
