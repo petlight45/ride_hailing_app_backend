@@ -86,7 +86,17 @@ Update the .env file with your local configuration values.
 ## Running the Server
 
 To run the server:
+Without Docker;
 
+After setting up virtual environments, run
+```
+    pip install -r requirements/local.txt
+
+    python manage.py runserver
+```
+
+
+With Docker;
 Install docker and docker compose on your operating environment
 
 For linux, Windows or Mac run
