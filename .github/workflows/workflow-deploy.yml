@@ -15,9 +15,17 @@ jobs:
     runs-on: ubuntu-latest
     # Run all pre-commit hooks on all the files.
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v3
-      - uses: pre-commit/action@v3.0.1
+
+      - name: Checkout Code Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v3
+        with:
+          python-version: 3.11
+      # Run all pre-commit hooks on all the files.
+      - name: Install and Run Pre-commit
+        uses: pre-commit/action@v3.0.1
 
   unittest:
     runs-on: ubuntu-latest
@@ -25,13 +33,10 @@ jobs:
     steps:
 
       - name: Checkout Code Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Build the Stack
         run: make build-test
-
-      - name: Run DB Migrations
-        run: make django-migrate
 
       - name: Run Tests
         run: make test-execute
