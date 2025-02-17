@@ -1,6 +1,6 @@
 # Ride Hailing App
 
-This project is a Django HTTP API server that exposes an endpoint to which allows you to calculate a ride price
+This project is a Django HTTP API server that exposes an endpoint which allows you to calculate a ride price
 dynamically based on real-time factors such as demand, distance, and traffic conditions.
 
 
