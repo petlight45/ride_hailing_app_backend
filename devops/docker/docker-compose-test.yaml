@@ -1,0 +1,15 @@
+version: '3.3'
+
+services:
+  backend:
+    build:
+      context: ../..
+      dockerfile: ./devops/docker/django/test/Dockerfile
+    image: ride_hailing_backend
+    container_name: ride_hailing_backend
+    environment:
+      DJANGO_GUEST_ENDPOINT_API_KEY: yazzVyePbMAkn6hqB7
+      DJANGO_EXECUTION_ENVIRONMENT: PIPELINE
+    ports:
+      - "8000:8000"
+    command: "./start.sh"

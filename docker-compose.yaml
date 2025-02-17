@@ -1,0 +1,14 @@
+version: '3.3'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: ./devops/docker/django/Dockerfile
+    image: ride_hailing_backend
+    container_name: ride_hailing_backend
+    env_file:
+      - ./envs/.env
+    ports:
+      - "8000:8000"
+    command: "./start.sh"

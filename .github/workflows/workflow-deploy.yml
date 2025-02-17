@@ -1,0 +1,40 @@
+name: Workflow-Deploy
+
+# Enable Buildkit and let compose use it to speed up image building
+env:
+  DOCKER_BUILDKIT: 1
+  COMPOSE_DOCKER_CLI_BUILD: 1
+
+on:
+  push:
+    branches: [ "main" ]
+
+
+jobs:
+  linter:
+    runs-on: ubuntu-latest
+    # Run all pre-commit hooks on all the files.
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v3
+      - uses: pre-commit/action@v3.0.1
+
+    unittest:
+      runs-on: ubuntu-latest
+
+      steps:
+
+        - name: Checkout Code Repository
+          uses: actions/checkout@v2
+
+        - name: Build the Stack
+          run: make build-test
+
+        - name: Run DB Migrations
+          run: make django-migrate
+
+        - name: Run Tests
+          run: make test-execute
+
+        - name: Tear down the Stack
+          run: make down
