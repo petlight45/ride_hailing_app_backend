@@ -19,22 +19,22 @@ jobs:
       - uses: actions/setup-python@v3
       - uses: pre-commit/action@v3.0.1
 
-    unittest:
-      runs-on: ubuntu-latest
+  unittest:
+    runs-on: ubuntu-latest
 
-      steps:
+    steps:
 
-        - name: Checkout Code Repository
-          uses: actions/checkout@v2
+      - name: Checkout Code Repository
+        uses: actions/checkout@v2
 
-        - name: Build the Stack
-          run: make build-test
+      - name: Build the Stack
+        run: make build-test
 
-        - name: Run DB Migrations
-          run: make django-migrate
+      - name: Run DB Migrations
+        run: make django-migrate
 
-        - name: Run Tests
-          run: make test-execute
+      - name: Run Tests
+        run: make test-execute
 
-        - name: Tear down the Stack
-          run: make down
+      - name: Tear down the Stack
+        run: make down
